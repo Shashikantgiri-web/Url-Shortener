@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react';
 
 const generate = () => {
     const [url, setUrl] = useState('');
@@ -7,7 +8,7 @@ const generate = () => {
     const [generate, setGenerate] = useState(false)
 
     const handleChange = (first) => {
-        
+
     }
 
   return (
