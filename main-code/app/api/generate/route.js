@@ -1,16 +1,26 @@
 import clientPromise from "@/lib/mongodb"
 
-export async function POST(request) {
-  const body = await request.json()
-  const client = await clientPromise
-  const db = client.db("bitlines")
-  const collection = db.collection("url")
+export const runtime = "nodejs"
 
-  collection.insertOne({
-     url: body.url,
-     shortUrl: body.shortUrl,
+export async function POST(request) {
+  try {
+    const body = await request.json()
+
+    const client = await clientPromise
+    const db = client.db("bitlines")
+
+    await db.collection("urls").insertOne({
+      url: body.url,
+      shortUrl: body.shortUrl,
     })
 
-    //did it update?
-  return Response.json({ success: true, error:false, message: "URL generated successfully" })
+    return Response.json({ success: true })
+  } catch (error) {
+    console.error(error)
+    return Response.json({ success: false }, { status: 500 })
+  }
+}
+
+export async function GET() {
+  return Response.json({ message: "Use POST method" })
 }
