@@ -1,4 +1,3 @@
-import clientPromise from "@/lib/mongodb"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -7,7 +6,7 @@ export async function POST(request) {
   try {
     const body = await request.json()
 
-    const client = await clientPromise
+    const client = await (await import("@/lib/mongodb")).default
     const db = client.db("bitlines")
 
     await db.collection("urls").insertOne({
