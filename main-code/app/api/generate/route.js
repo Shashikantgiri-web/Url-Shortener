@@ -1,10 +1,10 @@
 import clientPromise from "@/lib/mongodb"
 
 export async function POST(request) {
-  const body = await request.json()
-  const client = await clientPromise
-  const db = client.db("bitlines")
-  const collection = db.collection("url")
+  // const body = await request.json()
+  // const client = await clientPromise
+  // const db = client.db("bitlines")
+  // const collection = db.collection("url")
 
   // collection.insertOne({
   //    url: body.url,
