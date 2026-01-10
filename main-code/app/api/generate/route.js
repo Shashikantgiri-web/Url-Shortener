@@ -11,5 +11,6 @@ export async function POST(request) {
      shortUrl: body.shortUrl,
     })
 
+    //did it update?
   return Response.json({ success: true, error:false, message: "URL generated successfully" })
 }
