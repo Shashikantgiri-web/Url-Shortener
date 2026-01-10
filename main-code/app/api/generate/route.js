@@ -8,6 +8,9 @@ export async function POST(request) {
     const body = await request.json()
 
     const client = await clientPromise
+    if (!client) {
+      return Response.json({ success: false, error: "Database not connected" }, { status: 500 })
+    }
     const db = client.db("bitlines")
 
     await db.collection("urls").insertOne({

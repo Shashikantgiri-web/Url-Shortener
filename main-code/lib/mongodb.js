@@ -3,9 +3,7 @@
 import { MongoClient } from 'mongodb'
 
 const uri = process.env.MONGODB_URI
-const options = {
-  useNewUrlParser: true,
-}
+const options = {}
 
 let client
 let clientPromise
@@ -14,7 +12,7 @@ if (process.env.NODE_ENV === 'development') {
   if (!global._mongoClientPromise) {
     if (!uri) {
       console.warn('Warning: MONGODB_URI is not defined in developmental environment')
-      clientPromise = Promise.reject(new Error('Add Mongo URI to .env'))
+      clientPromise = Promise.resolve(null)
     } else {
       client = new MongoClient(uri, options)
       global._mongoClientPromise = client.connect()
@@ -25,9 +23,7 @@ if (process.env.NODE_ENV === 'development') {
   }
 } else {
   if (!uri) {
-    // During build, MONGODB_URI might be missing. 
-    // We return a promise that rejects when called, but doesn't throw at module scope.
-    clientPromise = Promise.reject(new Error('Add Mongo URI to .env'))
+    clientPromise = Promise.resolve(null)
   } else {
     client = new MongoClient(uri, options)
     clientPromise = client.connect()
