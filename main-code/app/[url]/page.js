@@ -1,6 +1,9 @@
 import { redirect } from "next/navigation"
 
 export default async function Page({ params }) {
-  const { url } = await params
-  return <div>My Post: {url}</div>
+  const { shortUrl } = await params
+  return <>
+  <div>My Post: {shortUrl}</div>
+  <button>Go Back</button>
+  </> 
 }
