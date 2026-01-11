@@ -10,8 +10,7 @@ const generate = () => {
 
   const generate = () => {
     const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Cookie", "_vercel_sso_nonce=9eu2WYHDRPECAAoPsZWKPCel");
+    myHeaders.append("Content-Type", "application/json")
 
     const raw = JSON.stringify({
       "url": url,

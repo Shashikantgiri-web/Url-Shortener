@@ -13,9 +13,9 @@ export async function POST(request) {
     }
     const db = client.db("bitlines")
     const collection = db.collection("urls")
-    const doc = collection.findOne({ shortUrl: body.shortUrl })
-    if (doc) {
-      return Response.json({ success: false, error: "Short URL already exists" }, { status: 400 })
+    const doc = await collection.findOne({shorturl: body.shorturl})
+    if(doc){
+        return Response.json({success: false, error: true,  message: 'URL already exists!' })
     }
 
     await collection.insertOne({
