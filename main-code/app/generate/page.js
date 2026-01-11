@@ -30,7 +30,7 @@ const generate = () => {
       .then((result) => {
         setUrl("")
         setShortUrl("")
-        setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shortUrl}`)
+        setGenerated(`${process.env.NEXT_PUBLIC_BASE_URL}/${shortUrl}`)
         console.log(result)
         alert(result.message)
       })
@@ -47,9 +47,9 @@ const generate = () => {
       {generated && (
         <div className="w-[40%] h-auto bg-orange-300 rounded-[10px] flex flex-col justify-center items-center py-2.5 mt-2.5">
           <h2 className="text-xl font-semibold mb-1.5">Your Short URL:</h2>
-          <Link href={generated} target="_blank" className="text-lg text-blue-700 underline">
-            {generated}
-          </Link>
+          <code>
+            <Link target="_blank" href={generated}>{generated}</Link>
+          </code>
         </div>
       )}
     </div>
