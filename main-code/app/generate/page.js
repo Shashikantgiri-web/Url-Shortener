@@ -29,8 +29,8 @@ const generate = () => {
       .then((response) => response.json())
       .then((result) => {
         setUrl("")
-        setShortUrl(`${process.env.NEXT_PUBLIC_BASE_URL}/${shortUrl}`)
-        setGenerated(true)
+        setShortUrl("")
+        setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shortUrl}`)
         console.log(result)
         alert(result.message)
       })
