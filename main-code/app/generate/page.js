@@ -46,7 +46,7 @@ const generate = () => {
       {generated && (
         <div className="w-[40%] h-auto bg-orange-300 rounded-[10px] flex flex-col justify-center items-center py-2.5 mt-2.5">
           <h2 className="text-xl font-semibold mb-1.5">Your Short URL:</h2>
-          <a href={`${process.env.NEXT_PUBLIC_BASE_URL}/${shortUrl}`} target="_blank" rel="noopener noreferrer" className="text-lg text-blue-700 underline">
+          <a href={`/${shortUrl}`} target="_blank" rel="noopener noreferrer" className="text-lg text-blue-700 underline">
             {shortUrl}
           </a>
         </div>
