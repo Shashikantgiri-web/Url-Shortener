@@ -24,9 +24,11 @@ const generate = () => {
       redirect: "follow"
     };
 
-    fetch("https://url-shortener-git-main-shashikantgiri-webs-projects.vercel.app/app/api/generate", requestOptions)
+    fetch("/api/generate", requestOptions)
       .then((response) => response.json())
       .then((result) => {
+        setUrl("")
+        setShortUrl("")
         console.log(result)
         alert(result.message)
       })
