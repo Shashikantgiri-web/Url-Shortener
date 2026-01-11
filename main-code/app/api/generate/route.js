@@ -12,8 +12,13 @@ export async function POST(request) {
       return Response.json({ success: false, error: "Database not connected" }, { status: 500 })
     }
     const db = client.db("bitlines")
+    const collection = db.collection("urls")
+    const doc = collection.findOne({ shortUrl: body.shortUrl })
+    if (doc) {
+      return Response.json({ success: false, error: "Short URL already exists" }, { status: 400 })
+    }
 
-    await db.collection("urls").insertOne({
+    await collection.insertOne({
       url: body.url,
       shortUrl: body.shortUrl,
     })
