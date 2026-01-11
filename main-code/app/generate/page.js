@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { useEffect } from 'react';
 
 const generate = () => {
-  const [url, setUrl] = useState('');
-  const [shortUrl, setShortUrl] = useState('');
+  const [url, setUrl] = useState("");
+  const [shortUrl, setShortUrl] = useState("");
   const [generated, setGenerated] = useState(false)
 
   const generate = () => {
@@ -27,8 +27,8 @@ const generate = () => {
     fetch("/api/generate", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        setUrl('')
-        setShortUrl('')
+        setUrl("")
+        setShortUrl("")
         console.log(result)
         alert(result.message)
       })
