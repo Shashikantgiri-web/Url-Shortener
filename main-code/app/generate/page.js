@@ -47,11 +47,11 @@ const generate = () => {
       {generated && (
         <div className="w-[40%] h-auto bg-orange-300 rounded-[10px] flex flex-col justify-center items-center py-2.5 mt-2.5">
           <h2 className="text-xl font-semibold mb-1.5">Your Short URL:</h2>
-          <Link href={`/${shortUrl}`} target="_blank" rel="noopener noreferrer" className="text-lg text-blue-700 underline">
+          <Link href={shortUrl} target="_blank" rel="noopener noreferrer" className="text-lg text-blue-700 underline">
             {shortUrl}
           </Link>
         </div>
-      )}  
+      )}
     </div>
   )
 }
