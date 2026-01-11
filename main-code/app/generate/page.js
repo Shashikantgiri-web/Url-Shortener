@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const generate = () => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
-  const [generated, setGenerated] = useState(false)
+  const [generated, setGenerated] = useState("")
 
   const generate = () => {
     const myHeaders = new Headers();
@@ -28,7 +28,8 @@ const generate = () => {
       .then((response) => response.json())
       .then((result) => {
         setUrl("")
-        setShortUrl("")
+        setShortUrl(`${process.env.NEXT_PUBLIC_BASE_URL}/${shortUrl}`)
+        setGenerated(true)
         console.log(result)
         alert(result.message)
       })
