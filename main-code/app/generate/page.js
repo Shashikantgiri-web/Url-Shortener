@@ -24,7 +24,7 @@ const generate = () => {
       redirect: "follow"
     };
 
-    fetch("/api/generate", requestOptions)
+    fetch("/app/api/generate", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         setUrl("")
