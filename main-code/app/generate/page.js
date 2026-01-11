@@ -27,8 +27,8 @@ const generate = () => {
     fetch("/api/generate", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        setUrl("")
-        setShortUrl("")
+        setUrl('')
+        setShortUrl('')
         console.log(result)
         alert(result.message)
       })
