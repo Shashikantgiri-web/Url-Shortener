@@ -26,7 +26,7 @@ const generate = () => {
     };
 
     fetch("/app/api/generate", requestOptions)
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((result) => {
         console.log(result)
         alert(result.message)
