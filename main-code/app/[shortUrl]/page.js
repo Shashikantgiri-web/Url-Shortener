@@ -19,12 +19,10 @@ export default async function Page({ params }) {
     //     redirect(`${process.env.NEXT_PUBLIC_BASE_URL}`)
     // }
 
-    return <>
-        <div>
+    return <div>
             My Post: {shorturl}
             <button onClick={()=>{console.log(`${shorturl}`)}} className="bg-blue-500 text-white px-4 py-2 rounded">
                 {shorturl}
             </button>
         </div>
-    </>
 }
