@@ -3,7 +3,8 @@ import clientPromise from "@/lib/mongodb"
 
 
 export default async function Page({ params }) {
-    const shorturl = (await params).shorturl
+    const shorturl = (await params)
+    console.log(shorturl)
 
     // const client = await clientPromise;
     // const db = client.db("bitlinks")
