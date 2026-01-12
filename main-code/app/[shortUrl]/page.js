@@ -22,7 +22,7 @@ export default async function Page({ params }) {
     return <>
         <div>
             My Post: {shorturl}
-            <button onClick={console.log(`${shorturl}`)} className="bg-blue-500 text-white px-4 py-2 rounded">
+            <button onClick={()=>{console.log(`${shorturl}`)}} className="bg-blue-500 text-white px-4 py-2 rounded">
                 {shorturl}
             </button>
         </div>
