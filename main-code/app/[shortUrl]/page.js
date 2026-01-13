@@ -9,13 +9,12 @@ export default async function Page({ params }) {
     const db = client.db("bitlinks")
     const collection = db.collection("url")
 
-    const doc = await collection.findOne({shorturl: shorturl})
+    const doc = await collection.findOne({ shortUrl: shorturl })
     // console.log(doc)
-    if(doc){
-        //  redirect(doc.url)
-        return <iframe src={doc.url} frameborder="0" allowfullscreen></iframe>
+    if (doc) {
+        redirect(doc.url)
     }
-    else{
+    else {
         redirect(`${process.env.NEXT_PUBLIC_BASE_URL}`)
     }
 }
