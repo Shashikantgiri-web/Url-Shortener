@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="w-[99%] h-auto flex flex-col justify-start items-center gap-4">
-        <section className="w-full h-[50vh] flex flex-row sm:flex-col bg-orange-200">
+        <section className="w-full h-[50vh] flex flex-col sm:flex-row bg-orange-200">
           <div className="w-[99%] h-full flex flex-col justify-center items-center gap-3">
             <p className={`text-3xl font-bold w-[70%] ${poppins.className}`}>The best URL shortener in Market</p>
             <p className="w-[70%] flex justify-center items-center">We are the most straightfoward URL Shortener in the world. Most of the url shorteners will track you or ask you to give your details for login. We understand your needs and hence we have created this URL shortener</p>
