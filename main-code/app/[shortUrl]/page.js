@@ -10,9 +10,9 @@ export default async function Page({ params }) {
     const collection = db.collection("url")
 
     const doc = await collection.findOne({ shortUrl: shorturl })
-    // console.log(doc)
     if (doc) {
-        redirect(doc.url)
+        // redirect(doc.url)
+        return <iframe src={doc.url} frameborder="0" allowfullscreen></iframe>
     }
     else {
         redirect(`${process.env.NEXT_PUBLIC_BASE_URL}`)
