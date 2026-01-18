@@ -18,8 +18,7 @@ export default async function Page({ params }) {
   }
   else {
     // redirect(`${process.env.NEXT_PUBLIC_BASE_URL}`)
-    return Response.json({ success: false, error: "Url Not Found" })
-  }
+  }   
 
 
   return <div>my post : {shortUrl}</div>
