@@ -20,8 +20,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+
   title: "Bitlink - URL Shortener",
   description: "The most straightforward URL shortener in the world",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +34,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
-        <div className="w-[98%] min-h-[180vh] max-h-[210vh] flex flex-col justify-start items-center overflow-hidden bg-[#e8ad61] text-[#441306] px-1.5">
+        <div className="w-[99%] min-h-[200vh] max-h-[210vh] flex flex-col justify-start items-center overflow-hidden bg-[#e8ad61] text-[#441306] px-1.5">
           <Navbar />
           {children}
           <Footer />
