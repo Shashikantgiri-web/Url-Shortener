@@ -10,17 +10,17 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <div className={`w-[99%] flex flex-col items-center gap-10 py-6 ${poppins.className}`}>
+    <div className={`w-[99%] flex flex-col justify-center items-center gap-1.5 py-0.5 ${poppins.className}`}>
       {/* Hero Section */}
-      <section className="w-full min-h-[70vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start p-10 md:pl-20 gap-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[#441306] leading-tight text-center md:text-left">
+      <section className="w-full h-[70vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
+        <div className="w-full md:w-[50%] h-[99%] flex flex-col justify-center items-center md:items-start gap-6">
+          <h1 className="text-3xl font-extrabold text-[#441306] leading-tight text-center md:text-left">
             The World's Most <span className="text-orange-600">Straightforward</span> URL Shortener
           </h1>
           <p className="text-lg md:text-xl text-[#5a2e1d] font-medium text-center md:text-left max-w-lg">
             Say goodbye to tracking, logins, and complicated dashboards. Simple, fast, and private link shortening for everyone.
           </p>
-          <div className="flex flex-row gap-4 w-full justify-center md:justify-start">
+          <div className="flex flex-row gap-4 w-full justify-center items-center md:items-start md:justify-start">
             <Link href="/generate" className="px-8 py-3 bg-orange-500 text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 hover:scale-105 transition-all text-center">
               Try now
             </Link>
@@ -29,7 +29,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="w-full md:w-1/2 min-h-[300px] relative overflow-hidden">
+        <div className="w-[99%] md:w-[50%] h-[99%] flex justify-center items-center relative overflow-hidden">
           <Image
             src="/vector.jpg"
             alt="URL Shortener Illustration"
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+      <section className="w-[99%] grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
         {[
           { title: "Privacy First", desc: "We don't track you. Period. Your data is your own, always.", icon: "🛡️" },
           { title: "No Registration", desc: "Start shortening immediately. No email, no password, no hassle.", icon: "⚡" },
@@ -55,9 +55,9 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="w-full bg-white/30 backdrop-blur-md rounded-2xl p-10 flex flex-col items-center gap-6 shadow-inner">
-        <h2 className="text-3xl font-bold text-[#441306]">Built for Speed & Privacy</h2>
-        <p className="max-w-2xl text-center text-[#5a2e1d] leading-relaxed">
+      <section className="w-[99%] h-[30vh] bg-white/30 backdrop-blur-md rounded-2xl flex flex-col items-center justify-center gap-6 shadow-inner">
+        <h2 className="text-2xl font-bold text-[#441306]">Built for Speed & Privacy</h2>
+        <p className="max-w-xl text-center text-[#5a2e1d] leading-relaxed">
           Most URL shorteners today treat you like the product. We've built Bitlink as a tool you can trust. No tracking cookies, no data selling, and no cluttered interface. Just the links you need, when you need them.
         </p>
       </section>
