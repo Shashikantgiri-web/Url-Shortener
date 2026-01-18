@@ -10,22 +10,58 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <>
-      <div className="w-[99%] h-auto flex flex-col justify-start items-center gap-4">
-        <section className="w-full h-[80vh] sm:h-[50vh] flex flex-col-reverse sm:flex-row bg-orange-200 p-1.5">
-          <div className="w-[99%] h-full flex flex-col justify-center items-center gap-3">
-            <p className={`text-3xl font-bold w-[70%] ${poppins.className}`}>The best URL shortener in Market</p>
-            <p className="w-[70%] flex justify-center items-center">We are the most straightfoward URL Shortener in the world. Most of the url shorteners will track you or ask you to give your details for login. We understand your needs and hence we have created this URL shortener</p>
-            <div className="w-[70%] h-12.5 flex flex-row justify-center items-center gap-4">
-               <button className='w-[40%] h-[90%] rounded-[10px] bg-orange-500 hover:text-white hover:bg-orange-600 hover:cursor-pointer'><Link href="/generate">Try now</Link></button>
-               <button className='w-[40%] h-[90%] rounded-[10px] bg-green-400 hover:bg-green-500 hover:text-white hover:cursor-pointer'><Link href="/github">Github</Link></button>
-            </div>
+    <div className={`w-[99%] flex flex-col items-center gap-10 py-6 ${poppins.className}`}>
+      {/* Hero Section */}
+      <section className="w-full min-h-[70vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start p-10 md:pl-20 gap-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-[#441306] leading-tight text-center md:text-left">
+            The World's Most <span className="text-orange-600">Straightforward</span> URL Shortener
+          </h1>
+          <p className="text-lg md:text-xl text-[#5a2e1d] font-medium text-center md:text-left max-w-lg">
+            Say goodbye to tracking, logins, and complicated dashboards. Simple, fast, and private link shortening for everyone.
+          </p>
+          <div className="flex flex-row gap-4 w-full justify-center md:justify-start">
+            <Link href="/generate" className="px-8 py-3 bg-orange-500 text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 hover:scale-105 transition-all text-center">
+              Try now
+            </Link>
+            <Link href="https://github.com/Shashikantgiri-web/Url-Shortener" className="px-8 py-3 bg-green-500 text-white font-bold rounded-xl shadow-lg hover:bg-green-600 hover:scale-105 transition-all text-center">
+              Github
+            </Link>
           </div>
-          <div className="w-[99%] h-full flex justify-center items-center relative">
-            <Image src="/vector.jpg" alt="URL Shortener" fill={true} className="mix-blend-darken" />
+        </div>
+        <div className="w-full md:w-1/2 min-h-[300px] relative overflow-hidden">
+          <Image
+            src="/vector.jpg"
+            alt="URL Shortener Illustration"
+            fill={true}
+            className="object-cover mix-blend-darken transition-transform duration-700 group-hover:scale-110"
+          />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+        {[
+          { title: "Privacy First", desc: "We don't track you. Period. Your data is your own, always.", icon: "🛡️" },
+          { title: "No Registration", desc: "Start shortening immediately. No email, no password, no hassle.", icon: "⚡" },
+          { title: "Simple Analytics", desc: "Get straight to the point with clean, easy-to-read links.", icon: "📈" }
+        ].map((feature, i) => (
+          <div key={i} className="bg-orange-100/50 backdrop-blur-sm p-8 rounded-2xl border-2 border-orange-200 hover:border-orange-400 transition-all hover:-translate-y-2 text-center flex flex-col items-center gap-3">
+            <span className="text-4xl">{feature.icon}</span>
+            <h3 className="text-xl font-bold text-[#441306]">{feature.title}</h3>
+            <p className="text-sm text-[#5a2e1d] leading-relaxed">{feature.desc}</p>
           </div>
-        </section>
-      </div>
-    </>
+        ))}
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="w-full bg-white/30 backdrop-blur-md rounded-2xl p-10 flex flex-col items-center gap-6 shadow-inner">
+        <h2 className="text-3xl font-bold text-[#441306]">Built for Speed & Privacy</h2>
+        <p className="max-w-2xl text-center text-[#5a2e1d] leading-relaxed">
+          Most URL shorteners today treat you like the product. We've built Bitlink as a tool you can trust. No tracking cookies, no data selling, and no cluttered interface. Just the links you need, when you need them.
+        </p>
+      </section>
+    </div>
   );
 }
+

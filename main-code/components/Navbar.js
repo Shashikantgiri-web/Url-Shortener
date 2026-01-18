@@ -19,7 +19,7 @@ const Navbar = () => {
             <button className='w-[80%] h-[90%] rounded-[10px] bg-orange-500 hover:text-white hover:bg-orange-600 hover:cursor-pointer'><Link href="/generate">Try now</Link></button>
           </div>
           <div className='w-[49%] h-[99%] flex justify-center items-center'>
-            <button className='w-[80%] h-[90%] rounded-[10px] bg-green-400 hover:bg-green-500 hover:text-white hover:cursor-pointer'><Link href="/github">Github</Link></button>
+            <button className='w-[80%] h-[90%] rounded-[10px] bg-green-400 hover:bg-green-500 hover:text-white hover:cursor-pointer'><Link href="https://github.com/Shashikantgiri-web/Url-Shortener">Github</Link></button>
           </div>
         </div>
       </div>
