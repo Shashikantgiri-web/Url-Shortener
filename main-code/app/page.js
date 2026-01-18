@@ -10,17 +10,17 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <div className={`w-[99%] flex flex-col justify-center items-center gap-1.5 py-0.5 ${poppins.className}`}>
+    <div className={`w-[99%] flex flex-col justify-center items-center gap-2.5 py-0.5 ${poppins.className}`}>
       {/* Hero Section */}
       <section className="w-full h-[70vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
-        <div className="w-full md:w-[50%] h-[99%] flex flex-col justify-center items-center md:items-start gap-6">
-          <h1 className="text-3xl font-extrabold text-[#441306] leading-tight text-center md:text-left">
+        <div className="w-full md:w-[50%] h-[99%] flex flex-col justify-center items-center gap-6">
+          <h1 className="w-[80%] text-3xl font-extrabold text-[#441306] leading-tight text-center md:text-left">
             The World's Most <span className="text-orange-600">Straightforward</span> URL Shortener
           </h1>
           <p className="text-lg md:text-xl text-[#5a2e1d] font-medium text-center md:text-left max-w-lg">
             Say goodbye to tracking, logins, and complicated dashboards. Simple, fast, and private link shortening for everyone.
           </p>
-          <div className="flex flex-row gap-4 w-full justify-center items-center md:items-start md:justify-start">
+          <div className="flex flex-row gap-4 w-full justify-center items-center">
             <Link href="/generate" className="px-8 py-3 bg-orange-500 text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 hover:scale-105 transition-all text-center">
               Try now
             </Link>
