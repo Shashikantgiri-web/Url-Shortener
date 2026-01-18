@@ -1,15 +1,13 @@
 "use client"
 import Link from 'next/link';
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react';
+import React, { useState } from 'react'
 
-const generate = () => {
+const Generate = () => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [generated, setGenerated] = useState("")
 
-  const generate = () => {
+  const handleGenerate = () => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json")
 
@@ -30,7 +28,7 @@ const generate = () => {
       .then((result) => {
         setUrl("")
         setShortUrl("")
-        setGenerated(`${process.env.NEXT_PUBLIC_BASE_URL}${shortUrl}`)
+        setGenerated(`${process.env.NEXT_PUBLIC_BASE_URL}app/${shortUrl}`)
         console.log(result)
         alert(result.message)
       })
@@ -42,7 +40,7 @@ const generate = () => {
       <h1 className="text-2xl font-bold w-[80%] sm:w-[40%] mb-1.5">Generate Your Short URL</h1>
       <input type="text" name="urlHere" id="a" value={url} placeholder='Enter your Url here' onChange={(e) => setUrl(e.target.value)} className='w-[80%] sm:w-[40%] h-7.5 rounded-[10px] flex justify-start items-center pl-2 hover:bg-orange-400 Hover:text-white bg-transparent ring-2 ring-orange-700' />
       <input type="text" name="textHere" id="b" value={shortUrl} placeholder='Enter your perferred short Url text here' onChange={(e) => setShortUrl(e.target.value)} className='w-[80%] sm:w-[40%] h-7.5 rounded-[10px] flex justify-start items-center pl-2 hover:bg-orange-400 Hover:text-white bg-transparent ring-2 ring-orange-700' />
-      <button className='w-[80%] sm:w-[40%] h-10 rounded-[10px] bg-orange-500 hover:text-white hover:bg-orange-600 mt-1.5' onClick={generate}>Generate</button>
+      <button className='w-[80%] sm:w-[40%] h-10 rounded-[10px] bg-orange-500 hover:text-white hover:bg-orange-600 mt-1.5' onClick={handleGenerate}>Generate</button>
 
       {generated && (
         <div className="w-[80%] sm:w-[40%] h-auto bg-orange-300 rounded-[10px] flex flex-col justify-center items-center py-2.5 mt-2.5">
@@ -56,4 +54,4 @@ const generate = () => {
   )
 }
 
-export default generate
+export default Generate
