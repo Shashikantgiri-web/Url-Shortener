@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <div className={`w-[99%] min-h-[140vh] max-h-[150vh] flex flex-col justify-center items-center gap-2.5 py-0.5 ${poppins.className}`}>
+    <div className={`w-[99%] min-h-[140vh] max-h-[190vh] flex flex-col justify-center items-center gap-2.5 py-0.5 ${poppins.className}`}>
       {/* Hero Section */}
       <section className="w-full h-[70vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
         <div className="w-full md:w-[50%] h-[99%] flex flex-col justify-center items-center gap-6">
