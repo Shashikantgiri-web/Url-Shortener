@@ -10,10 +10,10 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <div className={`w-[99%] h-[230vh] md:h-[190vh] flex flex-col justify-center items-center gap-2.5 py-0.5 ${poppins.className}`}>
+    <div className={`w-[99%] min-h-[140vh] max-h-[150vh] flex flex-col justify-center items-center gap-2.5 py-0.5 ${poppins.className}`}>
       {/* Hero Section */}
-      <section className="w-full min-h-[70vh] max-h-[110vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
-        <div className="w-full md:w-[50%] md:h-[99%] h-[50%] flex flex-col justify-center items-center gap-6">
+      <section className="w-full h-[70vh] flex flex-col-reverse md:flex-row bg-orange-200 rounded-2xl overflow-hidden shadow-xl group transition-all duration-500 hover:shadow-2xl">
+        <div className="w-full md:w-[50%] h-[99%] flex flex-col justify-center items-center gap-6">
           <h1 className="w-[80%] text-3xl font-extrabold text-[#441306] leading-tight text-center md:text-left">
             The World's Most <span className="text-orange-600">Straightforward</span> URL Shortener
           </h1>
@@ -29,7 +29,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="w-full md:w-[50%] md:h-[99%] h-[50%] flex justify-center items-center relative overflow-hidden">
+        <div className="w-[99%] md:w-[50%] h-[99%] flex justify-center items-center relative overflow-hidden">
           <Image
             src="/vector.jpg"
             alt="URL Shortener Illustration"
