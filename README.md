@@ -55,7 +55,7 @@ main-code/
 ```
 
 ## 📸 Screenshots
-<img width="160" height="103" alt="image" src="https://github.com/user-attachments/assets/6ea4c4b9-6293-47c1-a776-4d2bd8307197" />
+<img width="1280" height="824" alt="image" src="https://github.com/user-attachments/assets/1e3a5a71-da57-4076-9e16-2ff108f53789" />
 
 ## 🤝 Contributing
 Contributions are welcome! If you'd like to contribute to the project, please fork the repository and submit a pull request with your changes.
